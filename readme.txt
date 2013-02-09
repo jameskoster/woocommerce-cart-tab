@@ -30,6 +30,9 @@ This plugin uses CSS3 for things like animation, rounded corners and box shadows
 
 There is also the possibility that your theme is overwriting styles although that will be unlikely.
 
+= I found and fixed a bug how can I help? =
+Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocommerce-cart-tab">github</a>, push your fix then send a pull request.
+
 == Screenshots ==
 
 1. The cart tab
