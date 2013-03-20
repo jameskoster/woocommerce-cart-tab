@@ -7,13 +7,17 @@ Stable tag: 0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Displays a sitewide link to the cart which reveals the cart contents on hover.
+Displays a sitewide link to the WooCommerce cart which reveals the cart contents on hover.
 
 == Description ==
 
-Displays a link to the cart which is visible sitewide and fixed in position so it remains visible wherever the user scrolls. When the user hovers over the tab, the full cart widget is displayed.
+A big UX mistake on many eCommerce web sites is hiding access to the cart. The next logical step after adding a product to the cart is to buy it. Don't frustrate your customers by making them search for the cart button!
 
-There are options to display the cart tab on the right or the left, to use a light or dark skin to match your theme and to display the cart widget on hover or not.
+Upon activationg this plugin will display a link to the WooCommerce cart which is visible sitewide and fixed in position so it remains visible wherever the user scrolls. When the user hovers over the tab, the full cart widget is displayed.
+
+There are options (Catalog tab, WooCommerce settings) to display the cart tab on the right or the left, to use a light or dark skin to match your theme and to display the cart widget on hover or not.
+
+Please feel free to contribute on <a href="https://github.com/jameskoster/woocommerce-cart-tab">github</a>.
 
 == Installation ==
 
@@ -36,11 +40,14 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 
 == Screenshots ==
 
-1. The cart tab
-2. The cart tab on hover
-3. The cart tab with dark skin enabled
+1. The cart tab.
+2. The cart tab on hover.
+3. The cart tab with dark skin enabled.
 
 == Changelog ==
+
+= 0.1.1 - xx/xx/2013 =
+* UI tweak to be inline with 2.0s slightly updated settings API
 
 = 0.1 =
 Initial release.
