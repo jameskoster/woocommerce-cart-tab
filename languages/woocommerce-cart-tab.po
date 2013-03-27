@@ -1,0 +1,80 @@
+# This file is distributed under the same license as the WooCommerce Cart Tab package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2013-03-27 21:24:44+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: WooCommerce Cart Tab\n"
+
+#: cart-tab.php:43
+msgid "Cart Tab"
+msgstr ""
+
+#: cart-tab.php:48
+msgid "Cart Widget"
+msgstr ""
+
+#: cart-tab.php:49
+msgid "Display the cart widget on hover"
+msgstr ""
+
+#: cart-tab.php:54
+msgid "Use the light or dark skin"
+msgstr ""
+
+#: cart-tab.php:58
+msgid "Light"
+msgstr ""
+
+#: cart-tab.php:59
+msgid "Dark"
+msgstr ""
+
+#: cart-tab.php:63
+msgid "Position the cart tab on the right or left"
+msgstr ""
+
+#: cart-tab.php:67
+msgid "Right"
+msgstr ""
+
+#: cart-tab.php:68
+msgid "Left"
+msgstr ""
+
+#: cart-tab.php:157
+msgid "View your shopping cart"
+msgstr ""
+
+#: cart-tab.php:160
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: cart-tab.php:0
+msgid "WooCommerce Cart Tab"
+msgstr ""
+
+#: cart-tab.php:0
+msgid "http://jameskoster.co.uk/tag/cart-tab/"
+msgstr ""
+
+#: cart-tab.php:0
+msgid "Displays a sitewide link to the cart which reveals the cart contents on hover."
+msgstr ""
+
+#: cart-tab.php:0
+msgid "jameskoster"
+msgstr ""
+
+#: cart-tab.php:0
+msgid "http://jameskoster.co.uk"
+msgstr ""
+
+#: cart-tab.php:0
+msgid "0.1.1"
+msgstr ""
