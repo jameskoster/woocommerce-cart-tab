@@ -7,6 +7,8 @@ Description: Displays a sitewide link to the cart which reveals the cart content
 Author: jameskoster
 Tested up to: 3.5
 Author URI: http://jameskoster.co.uk
+Text Domain: woocommerce-cart-tab
+Domain Path: /languages/
 
 	License: GNU General Public License v3.0
 	License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -20,7 +22,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 	/**
 	 * Localisation
 	 **/
-	load_plugin_textdomain( 'woocommerce-cart-tab', false, dirname( plugin_basename( __FILE__ ) ) . '/' );
+	load_plugin_textdomain( 'woocommerce-cart-tab', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 
 	/**
