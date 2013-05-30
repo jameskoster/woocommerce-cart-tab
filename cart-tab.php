@@ -5,7 +5,7 @@ Plugin URI: http://jameskoster.co.uk/tag/cart-tab/
 Version: 0.1.1
 Description: Displays a sitewide link to the cart which reveals the cart contents on hover.
 Author: jameskoster
-Tested up to: 3.5
+Tested up to: 3.6
 Author URI: http://jameskoster.co.uk
 Text Domain: woocommerce-cart-tab
 Domain Path: /languages/
@@ -33,9 +33,9 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		class WC_ct {
 
 			public function __construct() {
-				add_action( 'wp_enqueue_scripts', array( &$this, 'setup_styles' ) );				// Enqueue the styles
-				add_action( 'wp_footer', array( &$this, 'woocommerce_cart_tab' ) ); 				// The cart tab function
-				add_filter( 'add_to_cart_fragments', array( &$this, 'wcct_add_to_cart_fragment' ) ); // The cart fragment
+				add_action( 'wp_enqueue_scripts', array( $this, 'setup_styles' ) );				// Enqueue the styles
+				add_action( 'wp_footer', array( $this, 'woocommerce_cart_tab' ) ); 				// The cart tab function
+				add_filter( 'add_to_cart_fragments', array( $this, 'wcct_add_to_cart_fragment' ) ); // The cart fragment
 
 				// Init settings
 				$this->settings = array(
@@ -79,8 +79,8 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 
 				// Admin
-				add_action( 'woocommerce_settings_image_options_after', array( &$this, 'admin_settings' ), 20);
-				add_action( 'woocommerce_update_options_catalog', array( &$this, 'save_admin_settings' ) );
+				add_action( 'woocommerce_settings_image_options_after', array( $this, 'admin_settings' ), 20);
+				add_action( 'woocommerce_update_options_catalog', array( $this, 'save_admin_settings' ) );
 			}
 
 

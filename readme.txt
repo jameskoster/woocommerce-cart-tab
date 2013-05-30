@@ -1,9 +1,9 @@
 === WooCommerce Cart Tab ===
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, cart
-Requires at least: 3.3
-Tested up to: 3.5.1
-Stable tag: 0.1
+Requires at least: 3.5
+Tested up to: 3.6
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,8 +46,14 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 
 == Changelog ==
 
-= 0.1.1 - xx/xx/2013 =
+= 0.1.1 - 30/05/2013 =
+* Improved i18n
+* added languages folder
+* added default .po file
+* added German translations for v0.1.1 (inluding the above enhancements)
+* Kudos to deckerweb for the above :-)
 * UI tweak to be inline with 2.0s slightly updated settings API
+* Stripped object pass by reference
 
 = 0.1 =
 Initial release.
