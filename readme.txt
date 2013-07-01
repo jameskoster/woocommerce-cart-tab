@@ -3,7 +3,7 @@ Contributors: jameskoster
 Tags: woocommerce, ecommerce, cart
 Requires at least: 3.5
 Tested up to: 3.6
-Stable tag: 0.1.1
+Stable tag: 0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 3. The cart tab with dark skin enabled.
 
 == Changelog ==
+
+= 0.2 - 01/07/2013 =
+* Added option to hide cart tab if the cart is empty. Kudos azhkuro.
 
 = 0.1.1 - 30/05/2013 =
 * Improved i18n

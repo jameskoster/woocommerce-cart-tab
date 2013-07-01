@@ -2,7 +2,7 @@
 /*
 Plugin Name: WooCommerce Cart Tab
 Plugin URI: http://jameskoster.co.uk/tag/cart-tab/
-Version: 0.1.1
+Version: 0.2
 Description: Displays a sitewide link to the cart which reveals the cart contents on hover.
 Author: jameskoster
 Tested up to: 3.6
@@ -52,7 +52,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 					),
 					array(
 						'name'		=> __( 'Hide Empty Cart', 'woocommerce-cart-tab' ),
-						'desc'		=> __( 'Hide if the cart widget is empty', 'woocommerce-cart-tab' ),
+						'desc'		=> __( 'Hide the cart tab if the cart is empty', 'woocommerce-cart-tab' ),
 						'id'		=> 'wc_ct_hide_empty_cart',
 						'type'		=> 'checkbox'
 					),
@@ -132,11 +132,11 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			// Display the cart tab and widget
 			function woocommerce_cart_tab() {
 				global $woocommerce;
-				$skin = get_option( 'wc_ct_skin' );
-				$position = get_option( 'wc_ct_horizontal_position' );
-				$widget = get_option( 'wc_ct_cart_widget' );
-				$hide_widget = get_option( 'wc_ct_hide_empty_cart' );
-				
+				$skin 			= get_option( 'wc_ct_skin' );
+				$position 		= get_option( 'wc_ct_horizontal_position' );
+				$widget 		= get_option( 'wc_ct_cart_widget' );
+				$hide_widget 	= get_option( 'wc_ct_hide_empty_cart' );
+
 				if ( sizeof( $woocommerce->cart->cart_contents ) == 0 && $hide_widget == 'yes' ) {
 					// hide empty cart
 				} else {
