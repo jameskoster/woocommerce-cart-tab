@@ -46,9 +46,15 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 					),
 					array(
 						'name' 		=> __( 'Cart Widget', 'woocommerce-cart-tab' ),
-						'desc' 	=> __( 'Display the cart widget on hover', 'woocommerce-cart-tab' ),
+						'desc' 		=> __( 'Display the cart widget on hover', 'woocommerce-cart-tab' ),
 						'id' 		=> 'wc_ct_cart_widget',
 						'type' 		=> 'checkbox'
+					),
+					array(
+						'name'		=> __( 'Hide Empty Cart', 'woocommerce-cart-tab' ),
+						'desc'		=> __( 'Hide if the cart widget is empty', 'woocommerce-cart-tab' ),
+						'id'		=> 'wc_ct_hide_empty_cart',
+						'type'		=> 'checkbox'
 					),
 					array(
 						'name' 		=> __( 'Use the light or dark skin', 'woocommerce-cart-tab' ),
@@ -74,6 +80,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 				// Default options
 				add_option( 'wc_ct_cart_widget', 'yes' );
+				add_option( 'wc_ct_hide_empty_cart', 'no' );
 				add_option( 'wc_ct_skin', 'light' );
 				add_option( 'wc_ct_horizontal_position', 'right' );
 
@@ -128,23 +135,29 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				$skin = get_option( 'wc_ct_skin' );
 				$position = get_option( 'wc_ct_horizontal_position' );
 				$widget = get_option( 'wc_ct_cart_widget' );
-				if ( ! is_cart() && ! is_checkout() ) {
-					if ( $widget == 'yes' ) {
-						echo '<div class="' . $position . ' cart-tab ' . $skin . '">';
-					} else {
-						echo '<div class="' . $position . ' cart-tab no-animation ' . $skin . '">';
-					}
-						wcct_cart_button();
-						// Display the widget if specified
+				$hide_widget = get_option( 'wc_ct_hide_empty_cart' );
+				
+				if ( sizeof( $woocommerce->cart->cart_contents ) == 0 && $hide_widget == 'yes' ) {
+					// hide empty cart
+				} else {
+					if ( ! is_cart() && ! is_checkout() ) {
 						if ( $widget == 'yes' ) {
-							// Check for WooCommerce 2.0 and display the cart widget
-							if ( version_compare( WOOCOMMERCE_VERSION, "2.0.0" ) >= 0 ) {
-								the_widget( 'WC_Widget_Cart', 'title=' );
-							} else {
-								the_widget( 'WooCommerce_Widget_Cart', 'title=' );
-							}
+							echo '<div class="' . $position . ' cart-tab ' . $skin . '">';
+						} else {
+							echo '<div class="' . $position . ' cart-tab no-animation ' . $skin . '">';
 						}
-					echo '</div>';
+							wcct_cart_button();
+							// Display the widget if specified
+							if ( $widget == 'yes' ) {
+								// Check for WooCommerce 2.0 and display the cart widget
+								if ( version_compare( WOOCOMMERCE_VERSION, "2.0.0" ) >= 0 ) {
+									the_widget( 'WC_Widget_Cart', 'title=' );
+								} else {
+									the_widget( 'WooCommerce_Widget_Cart', 'title=' );
+								}
+							}
+						echo '</div>';
+					}
 				}
 			}
 		}
