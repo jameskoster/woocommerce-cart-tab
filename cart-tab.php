@@ -137,9 +137,6 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				$widget 		= get_option( 'wc_ct_cart_widget' );
 				$hide_widget 	= get_option( 'wc_ct_hide_empty_cart' );
 
-				if ( sizeof( $woocommerce->cart->cart_contents ) == 0 && $hide_widget == 'yes' ) {
-					// hide empty cart
-				} else {
 					if ( ! is_cart() && ! is_checkout() ) {
 						if ( $widget == 'yes' ) {
 							echo '<div class="' . $position . ' cart-tab ' . $skin . '">';
@@ -160,14 +157,21 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 					}
 				}
 			}
-		}
 
 
 		// Displays the cart total and number of items as a link
 		function wcct_cart_button() {
 			global $woocommerce;
 			?>
-			<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart', 'woocommerce-cart-tab' ); ?>" class="cart-parent">
+			<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart', 'woocommerce-cart-tab' ); ?>" class="cart-parent"
+			        <?php
+			        if ($woocommerce->cart->get_cart_contents_count() == 0 && $hide_widget == 'yes' ) {
+			        	// Hide empty cart
+			        	// Compatible with WP Super Cache as long as "late init" is enabled
+                   			echo 'style="visibility: hidden;"';
+				}
+				?>
+ 			>
 				<?php
 					echo $woocommerce->cart->get_cart_total();
 					echo '<span class="contents">' . sprintf( _n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'woocommerce-cart-tab' ), $woocommerce->cart->get_cart_contents_count() ) . '</span>';
