@@ -75,7 +75,14 @@
 		a.cart-parent {
 			left:-8.402328em;
 			width:8.402328em;
+			.transition(left,ease,.5s);
 			.border_radius_left(3px);
+			&.hidden {
+				left:0;
+			}
+			&.visible {
+				left:-8.402328em;
+			}
 		}
 		&:hover {
 			right:0;
@@ -93,7 +100,14 @@
 		a.cart-parent {
 			right:-8.402328em;
 			width:8.402328em;
+			.transition(right,ease,.5s);
 			.border_radius_right(3px);
+			&.hidden {
+				right:0;
+			}
+			&.visible {
+				right:-8.402328em;
+			}
 		}
 		&:hover {
 			left:0;
