@@ -138,9 +138,9 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 					if ( ! is_cart() && ! is_checkout() ) {
 						if ( $widget == 'yes' ) {
-							echo '<div class="' . $position . ' cart-tab ' . $skin . '">';
+							echo '<div class="' . esc_attr( $position ) . ' cart-tab ' . esc_attr( $skin ) . '">';
 						} else {
-							echo '<div class="' . $position . ' cart-tab no-animation ' . $skin . '">';
+							echo '<div class="' . esc_attr( $position ) . ' cart-tab no-animation ' . esc_attr( $skin ) . '">';
 						}
 							wcct_cart_button();
 							// Display the widget if specified
@@ -170,10 +170,10 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				$visibility		= 'visible';
 			}
 			?>
-			<a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart', 'woocommerce-cart-tab' ); ?>" class="cart-parent <?php echo $visibility; ?>">
+			<a href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'woocommerce-cart-tab' ); ?>" class="cart-parent <?php echo esc_attr( $visibility ); ?>">
 				<?php
-					echo $woocommerce->cart->get_cart_total();
-					echo '<span class="contents">' . sprintf( _n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'woocommerce-cart-tab' ), $woocommerce->cart->get_cart_contents_count() ) . '</span>';
+					echo wp_kses_post( $woocommerce->cart->get_cart_total() );
+					echo '<span class="contents">' . sprintf( _n( '%d item', '%d items', intval( $woocommerce->cart->get_cart_contents_count() ), 'woocommerce-cart-tab' ), intval( $woocommerce->cart->get_cart_contents_count() ) ) . '</span>';
 				?>
 			</a>
 			<?php
