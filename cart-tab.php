@@ -2,7 +2,7 @@
 /*
 Plugin Name: WooCommerce Cart Tab
 Plugin URI: http://jameskoster.co.uk/tag/cart-tab/
-Version: 0.2.1
+Version: 0.2.2
 Description: Displays a sitewide link to the cart which reveals the cart contents on hover.
 Author: jameskoster
 Tested up to: 3.6.1
