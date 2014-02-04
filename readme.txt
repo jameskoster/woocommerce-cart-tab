@@ -2,8 +2,8 @@
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, cart
 Requires at least: 3.5
-Tested up to: 3.6.1
-Stable tag: 0.2.2
+Tested up to: 3.8.1
+Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 3. The cart tab with dark skin enabled.
 
 == Changelog ==
+
+= 0.3.0 - 04/03/2014 =
+* WooCommerce 2.1 compatibility.
 
 = 0.2.2 - 14/01/2014 =
 * Sanitized some outputs (kudos colegeissinger).
