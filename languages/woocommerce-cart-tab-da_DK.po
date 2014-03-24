@@ -1,0 +1,126 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Cart Tab v0.3.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-03-24 10:08:16+0000\n"
+"Last-Translator: gitte <gitte@olrik.dk>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Danish\n"
+"X-Poedit-Country: DENMARK\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#. translators: plugin header field 'Name'
+#: cart-tab.php:0
+#@ woocommerce-cart-tab
+msgid "WooCommerce Cart Tab"
+msgstr ""
+
+#. translators: plugin header field 'PluginURI'
+#: cart-tab.php:0
+#@ woocommerce-cart-tab
+msgid "http://jameskoster.co.uk/tag/cart-tab/"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: cart-tab.php:0
+#@ woocommerce-cart-tab
+msgid "Displays a sitewide link to the cart which reveals the cart contents on hover."
+msgstr "Viser et link til kurven på hele sitet og viser indholdet af kurven når du holder musen henover."
+
+#. translators: plugin header field 'Author'
+#: cart-tab.php:0
+#@ woocommerce-cart-tab
+msgid "jameskoster"
+msgstr ""
+
+#. translators: plugin header field 'AuthorURI'
+#: cart-tab.php:0
+#@ woocommerce-cart-tab
+msgid "http://jameskoster.co.uk"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: cart-tab.php:0
+#@ woocommerce-cart-tab
+msgid "0.3.1"
+msgstr ""
+
+#: cart-tab.php:43
+#@ woocommerce-cart-tab
+msgid "Cart Tab"
+msgstr ""
+
+#: cart-tab.php:48
+#@ woocommerce-cart-tab
+msgid "Cart Widget"
+msgstr ""
+
+#: cart-tab.php:49
+#@ woocommerce-cart-tab
+msgid "Display the cart widget on hover"
+msgstr "Viser kurv widget'en når du holder musen henover"
+
+#: cart-tab.php:54
+#@ woocommerce-cart-tab
+msgid "Hide Empty Cart"
+msgstr "Skjul tom kurv"
+
+#: cart-tab.php:55
+#@ woocommerce-cart-tab
+msgid "Hide the cart tab if the cart is empty"
+msgstr "Skjul kurv tab'en hvis kurven er tom"
+
+#: cart-tab.php:60
+#@ woocommerce-cart-tab
+msgid "Use the light or dark skin"
+msgstr "Brug det lyse eller det mørke skin"
+
+#: cart-tab.php:64
+#@ woocommerce-cart-tab
+msgid "Light"
+msgstr "Lys"
+
+#: cart-tab.php:65
+#@ woocommerce-cart-tab
+msgid "Dark"
+msgstr "Mørk"
+
+#: cart-tab.php:69
+#@ woocommerce-cart-tab
+msgid "Position the cart tab on the right or left"
+msgstr "Indsæt kurv tab'en på højre eller venstre side"
+
+#: cart-tab.php:73
+#@ woocommerce-cart-tab
+msgid "Right"
+msgstr "Højre"
+
+#: cart-tab.php:74
+#@ woocommerce-cart-tab
+msgid "Left"
+msgstr "Venstre"
+
+#: cart-tab.php:174
+#@ woocommerce-cart-tab
+msgid "View your shopping cart"
+msgstr "Se din indkøbskurv"
+
+#: cart-tab.php:177
+#, php-format
+#@ woocommerce-cart-tab
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d vare"
+msgstr[1] "%d varer"
+
