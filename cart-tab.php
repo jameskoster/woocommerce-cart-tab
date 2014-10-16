@@ -56,6 +56,12 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 						'id'		=> 'wc_ct_hide_empty_cart',
 						'type'		=> 'checkbox'
 					),
+                    array(
+                        'name'		=> __( 'Show only on shop pages', 'woocommerce-cart-tab' ),
+                        'desc'		=> __( 'If unchecked, the cart wont be shown on non woocommerce pages, like blogs', 'woocommerce-cart-tab' ),
+                        'id'		=> 'wc_ct_show_on_all_pages',
+                        'type'		=> 'checkbox'
+                    ),
 					array(
 						'name' 		=> __( 'Use the light or dark skin', 'woocommerce-cart-tab' ),
 						'id' 		=> 'wc_ct_skin',
@@ -83,7 +89,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				add_option( 'wc_ct_hide_empty_cart', 'no' );
 				add_option( 'wc_ct_skin', 'light' );
 				add_option( 'wc_ct_horizontal_position', 'right' );
-
+                add_option( 'wc_ct_show_on_all_pages', 'yes' );
 
 				// Admin
 				add_action( 'woocommerce_settings_image_options_after', array( $this, 'admin_settings' ), 20 );
@@ -110,7 +116,11 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 			// Setup styles
 			function setup_styles() {
-				if ( ! is_cart() && ! is_checkout() ) {
+                $show_on_all_pages 	= get_option( 'wc_ct_show_on_all_pages' );
+                if($show_on_all_pages == 'no'){
+                    $show_on_all_pages = is_woocommerce();
+                }
+				if ( ! is_cart() && ! is_checkout() && $show_on_all_pages) {
 					wp_enqueue_style( 'ct-styles', plugins_url( '/assets/css/style.css', __FILE__ ) );
 				}
 			}
@@ -137,6 +147,13 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				$position 		= get_option( 'wc_ct_horizontal_position' );
 				$widget 		= get_option( 'wc_ct_cart_widget' );
 				$hide_widget 	= get_option( 'wc_ct_hide_empty_cart' );
+                $show_on_all_pages 	= get_option( 'wc_ct_show_on_all_pages' );
+
+                if($show_on_all_pages == 'no'){
+                    $show_on_all_pages = is_woocommerce();
+                }
+
+
 				if ( $woocommerce->cart->get_cart_contents_count() == 0 && $hide_widget == 'yes' ) {
 		        // Hide empty cart
 		        // Compatible with WP Super Cache as long as "late init" is enabled
@@ -145,7 +162,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 					$visibility		= 'visible';
 				}
 
-					if ( ! is_cart() && ! is_checkout() ) {
+					if ( ! is_cart() && ! is_checkout() && $show_on_all_pages) {
 						if ( $widget == 'yes' ) {
 							echo '<div class="' . esc_attr( $position ) . ' cart-tab ' . esc_attr( $skin ) . ' ' . esc_attr( $visibility ) . '">';
 						} else {
