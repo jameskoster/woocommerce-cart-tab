@@ -2,7 +2,7 @@
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, cart
 Requires at least: 3.5
-Tested up to: 3.8.1
+Tested up to: 4.0
 Stable tag: 0.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -48,6 +48,7 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 
 = 0.5.0 - 15/05/2014 =
 * Localization - Added .pot.
+* New - Added option to not display the cart tab on non-WooCommerce pages. Props @Gjordis.
 
 = 0.4.0 - 24/03/2014 =
 * Localization - Added Danish translation (props MamaTux)
