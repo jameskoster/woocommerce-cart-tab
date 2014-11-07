@@ -184,7 +184,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 
 		// Displays the cart total and number of items as a link
-		function wcct_cart_button($visibility) {
+		function wcct_cart_button($visibility = 'hidden') {
 			global $woocommerce;
 			?>
 			<a href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'woocommerce-cart-tab' ); ?>" class="cart-parent <?php echo esc_attr( $visibility ); ?>">
