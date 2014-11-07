@@ -187,10 +187,10 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		function wcct_cart_button($visibility = 'hidden') {
 			global $woocommerce;
 			?>
-			<a href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'woocommerce-cart-tab' ); ?>" class="cart-parent <?php echo esc_attr( $visibility ); ?>">
+			<a href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'woocommerce' ); ?>" class="cart-parent <?php echo esc_attr( $visibility ); ?>">
 				<?php
 					echo wp_kses_post( $woocommerce->cart->get_cart_total() );
-					echo '<span class="contents">' . sprintf( _n( '%d item', '%d items', intval( $woocommerce->cart->get_cart_contents_count() ), 'woocommerce-cart-tab' ), intval( $woocommerce->cart->get_cart_contents_count() ) ) . '</span>';
+					echo '<span class="contents">' . sprintf( _n( '%d item', '%d items', intval( $woocommerce->cart->get_cart_contents_count() ), 'woocommerce' ), intval( $woocommerce->cart->get_cart_contents_count() ) ) . '</span>';
 				?>
 			</a>
 			<?php
