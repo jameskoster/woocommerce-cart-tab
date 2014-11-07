@@ -49,6 +49,7 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 = 0.5.0 - 15/05/2014 =
 * Localization - Added .pot.
 * New - Added option to not display the cart tab on non-WooCommerce pages. Props @Gjordis.
+* Fix - Some php notices and textdomain issues. Props @chrillep.
 
 = 0.4.0 - 24/03/2014 =
 * Localization - Added Danish translation (props MamaTux)
