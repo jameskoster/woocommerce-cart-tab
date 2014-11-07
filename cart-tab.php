@@ -167,7 +167,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 						} else {
 							echo '<div class="' . esc_attr( $position ) . ' cart-tab no-animation ' . esc_attr( $skin ) . ' ' . esc_attr( $visibility ) . '">';
 						}
-							wcct_cart_button();
+							wcct_cart_button($visibility);
 							// Display the widget if specified
 							if ( $widget == 'yes' ) {
 								// Check for WooCommerce 2.0 and display the cart widget
@@ -184,7 +184,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 
 
 		// Displays the cart total and number of items as a link
-		function wcct_cart_button() {
+		function wcct_cart_button($visibility) {
 			global $woocommerce;
 			?>
 			<a href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'woocommerce-cart-tab' ); ?>" class="cart-parent <?php echo esc_attr( $visibility ); ?>">
