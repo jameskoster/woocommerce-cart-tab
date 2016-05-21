@@ -74,7 +74,16 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 							'left' 	=> __( 'Left', 'woocommerce-cart-tab' )
 						)
 					),
-					array( 'type' => 'sectionend', 'id' => 'wc_ct_options' ),
+					array(
+						'name'		=> __( 'Cart link display total/subtotal', 'woocommerce-cart-tab' ),
+						'id'		=> 'wc_ct_link_display_total',
+						'type'		=> 'select',
+						'options'       => array(
+							'total'    => __( 'total', 'woocommerce-cart-tab' ) ,
+							'subtotal' => __( 'subtotal', 'woocommerce-cart-tab' )
+						)
+					),
+		                        array( 'type' => 'sectionend', 'id' => 'wc_ct_options' ),
 				);
 
 
@@ -83,6 +92,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				add_option( 'wc_ct_hide_empty_cart', 'no' );
 				add_option( 'wc_ct_skin', 'light' );
 				add_option( 'wc_ct_horizontal_position', 'right' );
+				add_option( 'wc_ct_link_display_total', 'total' );
 
 
 				// Admin
@@ -170,10 +180,15 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 		// Displays the cart total and number of items as a link
 		function wcct_cart_button() {
 			global $woocommerce;
+			$link_total = get_option( 'wc_ct_link_display_total' );
 			?>
 			<a href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'woocommerce-cart-tab' ); ?>" class="cart-parent <?php echo esc_attr( $visibility ); ?>">
 				<?php
-					echo wp_kses_post( $woocommerce->cart->get_cart_total() );
+					if ( $link_total == 'total' ) {
+						echo wp_kses_post( $woocommerce->cart->get_cart_total() );
+					} elseif ( $link_total == 'subtotal' ) {
+						echo wp_kses_post( $woocommerce->cart->get_cart_subtotal() );
+					}
 					echo '<span class="contents">' . sprintf( _n( '%d item', '%d items', intval( $woocommerce->cart->get_cart_contents_count() ), 'woocommerce-cart-tab' ), intval( $woocommerce->cart->get_cart_contents_count() ) ) . '</span>';
 				?>
 			</a>
