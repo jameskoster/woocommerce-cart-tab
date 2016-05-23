@@ -47,6 +47,7 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 == Changelog ==
 
 = 0.4.0 - 23/05/2016 =
+* New - Cart tab widget now has a max-height and will scroll if the contents are larger than the container.
 * New - Option to display cart total or subtotal. Props @craigtracey
 * Tweak - Translations now managed on .org (https://translate.wordpress.org/projects/wp-plugins/woocommerce-cart-tab).
 
