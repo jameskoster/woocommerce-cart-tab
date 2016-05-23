@@ -1,9 +1,9 @@
 === WooCommerce Cart Tab ===
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, cart
-Requires at least: 3.5
-Tested up to: 3.8.1
-Stable tag: 0.3.1
+Requires at least: 4.4
+Tested up to: 4.5.2
+Stable tag: 0.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 3. The cart tab with dark skin enabled.
 
 == Changelog ==
+
+= 0.4.0 - 23/05/2016 =
+* New - Option to display cart total or subtotal. Props @craigtracey
 
 = 0.3.1 - 04/17/2014 =
 * Fix - Hide the tab shadow when the cart is hidden.
