@@ -48,6 +48,7 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 
 = 0.4.0 - 23/05/2016 =
 * New - Option to display cart total or subtotal. Props @craigtracey
+* Tweak - Translations now managed on .org (https://translate.wordpress.org/projects/wp-plugins/woocommerce-cart-tab).
 
 = 0.3.1 - 04/17/2014 =
 * Fix - Hide the tab shadow when the cart is hidden.
