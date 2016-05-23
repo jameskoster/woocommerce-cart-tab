@@ -22,6 +22,15 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/assets\/css\/style.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/assets\/css\/style.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/assets\/css\/style.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -71,39 +80,6 @@
 		"processHTML": 0,
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
-		},
-	"\/screenshot-1.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 9015,
-		"inputAbbreviatedPath": "\/screenshot-1.png",
-		"outputAbbreviatedPath": "\/screenshot-1.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/screenshot-2.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 131863,
-		"inputAbbreviatedPath": "\/screenshot-2.png",
-		"outputAbbreviatedPath": "\/screenshot-2.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/screenshot-3.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 72739,
-		"inputAbbreviatedPath": "\/screenshot-3.png",
-		"outputAbbreviatedPath": "\/screenshot-3.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
 		}
 	},
 "hooks": [
