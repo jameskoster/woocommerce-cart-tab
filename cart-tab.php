@@ -172,7 +172,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				}
 
 				if ( ! is_cart() && ! is_checkout() ) {
-					if ( 'yes' == $widget ) {
+					if ( 'yes' == $widget && !wp_is_mobile() ) {
 						echo '<div class="' . esc_attr( $position ) . ' cart-tab ' . esc_attr( $skin ) . ' ' . esc_attr( $visibility ) . '">';
 					} else {
 						echo '<div class="' . esc_attr( $position ) . ' cart-tab no-animation ' . esc_attr( $skin ) . ' ' . esc_attr( $visibility ) . '">';
@@ -203,7 +203,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 			global $woocommerce;
 			$link_total = get_option( 'wc_ct_link_display_total' );
 			?>
-			<a href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'woocommerce-cart-tab' ); ?>" class="cart-parent <?php echo esc_attr( $visibility ); ?>">
+			<a href="<?php echo esc_url( $woocommerce->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'woocommerce-cart-tab' ); ?>" class="cart-parent">
 				<?php
 				if ( 'total' == $link_total ) {
 					echo wp_kses_post( $woocommerce->cart->get_cart_total() );
