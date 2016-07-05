@@ -181,7 +181,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 					wcct_cart_button();
 
 					// Display the widget if specified.
-					if ( 'yes' == $widget ) {
+					if ( 'yes' == $widget && !wp_is_mobile() ) {
 						// Check for WooCommerce 2.0 and display the cart widget.
 						if ( version_compare( WOOCOMMERCE_VERSION, '2.0.0' ) >= 0 ) {
 							the_widget( 'WC_Widget_Cart', 'title=' );
