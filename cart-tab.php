@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WooCommerce Cart Tab
  * Plugin URI: http://jameskoster.co.uk/tag/cart-tab/
- * Version: 0.4.0
+ * Version: 0.5.0
  * Description: Displays a sitewide link to the cart which reveals the cart contents on hover.
  * Author: jameskoster
  * Tested up to: 4.5.2
@@ -172,7 +172,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				}
 
 				if ( ! is_cart() && ! is_checkout() ) {
-					if ( 'yes' == $widget && !wp_is_mobile() ) {
+					if ( 'yes' == $widget && ! wp_is_mobile() ) {
 						echo '<div class="' . esc_attr( $position ) . ' cart-tab ' . esc_attr( $skin ) . ' ' . esc_attr( $visibility ) . '">';
 					} else {
 						echo '<div class="' . esc_attr( $position ) . ' cart-tab no-animation ' . esc_attr( $skin ) . ' ' . esc_attr( $visibility ) . '">';
@@ -181,7 +181,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 					wcct_cart_button();
 
 					// Display the widget if specified.
-					if ( 'yes' == $widget && !wp_is_mobile() ) {
+					if ( 'yes' == $widget && ! wp_is_mobile() ) {
 						// Check for WooCommerce 2.0 and display the cart widget.
 						if ( version_compare( WOOCOMMERCE_VERSION, '2.0.0' ) >= 0 ) {
 							the_widget( 'WC_Widget_Cart', 'title=' );

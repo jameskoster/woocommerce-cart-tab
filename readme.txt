@@ -2,8 +2,8 @@
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, cart
 Requires at least: 4.4
-Tested up to: 4.5.2
-Stable tag: 0.4.0
+Tested up to: 4.5.3
+Stable tag: 0.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,6 +45,9 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 3. The cart tab with dark skin enabled.
 
 == Changelog ==
+
+= 0.5.0 - 06/07/2016 =
+* New - Cart tab no longer displayed on handheld devices.
 
 = 0.4.0 - 23/05/2016 =
 * New - Cart tab widget now has a max-height and will scroll if the contents are larger than the container.
