@@ -1,0 +1,7 @@
+# Sass
+.sass-cache
+
+# Grunt
+/node_modules/
+/storefront/
+npm-debug.log

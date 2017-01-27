@@ -1,0 +1,96 @@
+@import 'bourbon';
+
+.woocommerce-cart-tab-container {
+	width: 400px;
+	position: fixed;
+	top: 0;
+	z-index: 999999;
+	@include transition(all cubic-bezier(.11,.51,.54,.9) .5s);
+	box-sizing: border-box;
+
+	.widget_shopping_cart {
+		overflow: auto;
+		padding: 40px;
+	}
+}
+
+.admin-bar .woocommerce-cart-tab-container {
+	top: 32px;
+}
+
+.woocommerce-cart-tab-container--left {
+	left: 0;
+	@include transform(translateX(-400px));
+	border-right: 1px solid rgba(#000,.2);
+
+	.woocommerce-cart-tab {
+		left: 399px;
+		border-radius: 0 5px 5px 0;
+		border-left-width: 0;
+	}
+
+	&.woocommerce-cart-tab-container--visible {
+		@include transform(translateX(0));
+	}
+}
+
+.woocommerce-cart-tab-container--right {
+	right: 0;
+	@include transform(translateX(400px));
+	border-left: 1px solid rgba(#000,.2);
+
+	.woocommerce-cart-tab {
+		right: 399px;
+		border-radius: 5px 0 0 5px;
+		border-right-width: 0;
+	}
+
+	&.woocommerce-cart-tab-container--visible {
+		@include transform(translateX(0));
+	}
+}
+
+.woocommerce-cart-tab {
+	position: absolute;
+	top: 60px;
+	width: 60px;
+	height: 60px;
+	box-sizing: border-box;
+	line-height: 1;
+	border: 1px solid rgba(#000,.2);
+	cursor: pointer;
+
+	&:focus {
+		outline: none;
+	}
+
+	.woocommerce-cart-tab__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		width: 32px;
+	}
+}
+
+.woocommerce-cart-tab__contents {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	line-height: 69px;
+	text-align: center;
+	z-index: 10;
+}
+
+.woocommerce-cart-tab a {
+	display: block;
+}
+
+@media screen and ( max-width: 768px ) {
+	.woocommerce-cart-tab-container {
+		display: none;
+	}
+}
