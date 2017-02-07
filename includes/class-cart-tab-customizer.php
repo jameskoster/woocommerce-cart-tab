@@ -74,7 +74,7 @@ if ( ! class_exists( 'WooCommerce_Cart_Tab_Customizer' ) ) :
 			) );
 
 			$wp_customize->add_setting( 'woocommerce_cart_tab_accent', array(
-				'default'           	=> '#2c2d33',
+				'default'           	=> '#333333',
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 			) );
 

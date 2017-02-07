@@ -45,6 +45,10 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 == Changelog ==
 
 = 1.0.0 - 26/01/2017 =
+* New - The cart tab now opens when an add to cart button on a shop page is clicked.
+* New - Cart tab opens on click rather than hover.
+* New - Display controls moved to the Customizer.
+* New - Integration with Storefront theme.
 
 = 0.5.0 - 06/07/2016 =
 * New - Cart tab no longer displayed on handheld devices.
