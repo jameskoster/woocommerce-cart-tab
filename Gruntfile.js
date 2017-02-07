@@ -45,6 +45,7 @@ module.exports = function( grunt ) {
 				},
 				files: [{
 					'assets/css/style.css': 'assets/scss/style.scss',
+					'assets/css/style-storefront.css': 'assets/scss/style-storefront.scss',
 				}]
 			}
 		},

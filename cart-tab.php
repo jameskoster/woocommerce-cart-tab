@@ -49,6 +49,7 @@ if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', g
 				include_once( 'includes/cart-tab-templates.php' );
 				include_once( 'includes/class-cart-tab-customizer.php' );
 				include_once( 'includes/class-cart-tab-frontend.php' );
+				include_once( 'includes/class-cart-tab-hooks.php' );
 			}
 		}
 

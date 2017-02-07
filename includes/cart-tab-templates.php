@@ -9,7 +9,14 @@ if ( ! function_exists( 'woocommerce_cart_tab_button' ) ) {
 		global $woocommerce;
 		?>
 		<div class="woocommerce-cart-tab">
-			<svg class="woocommerce-cart-tab__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 508 620"><path class="woocommerce-cart-tab-icon__handle" d="M163.3 176.5c8.4-79.7 46.5-142 90.6-142 44.1 0 82.2 62.3 90.6 142 11.9-1.2 23.3-2.6 34.3-4C368.4 73.2 317.3 0 253.9 0c-63.4 0-114.5 73.2-124.8 172.4C140 173.9 151.4 175.2 163.3 176.5z"/><path class="woocommerce-cart-tab-icon__bag" d="M466.7 181.9c-21.7 3.5-51.4 8.8-86.3 13.4 -10.9 1.4-22.4 2.8-34.3 4 -28.6 2.9-59.6 4.9-92.2 4.9 -32.5 0-63.6-2-92.2-4.9 -11.9-1.2-23.4-2.6-34.3-4l0 0c-34.9-4.6-64.6-9.9-86.3-13.4L1.3 578.4C1.3 592.8 114.4 620 253.9 620s252.6-27.2 252.6-41.6L466.7 181.9z"/></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 104.5" class="woocommerce-cart-tab__icon">
+<path class="woocommerce-cart-tab__icon-bag" d="M67.2,26.7C64.6,11.5,54.8,0.2,43.1,0.2C31.4,0.2,21.6,11.5,19,26.7H0.1v77.6h86V26.7H67.2z M43.1,4.2
+	c9.6,0,17.7,9.6,20,22.6H23C25.4,13.8,33.5,4.2,43.1,4.2z M82.1,100.4h-78V30.7h14.4c-0.1,1.3-0.2,2.6-0.2,3.9c0,1.1,0,2.2,0.1,3.3
+	c-0.8,0.6-1.4,1.6-1.4,2.8c0,1.9,1.6,3.5,3.5,3.5s3.5-1.6,3.5-3.5c0-1.2-0.6-2.3-1.6-2.9c-0.1-1-0.1-2-0.1-3.1
+	c0-1.3,0.1-2.6,0.2-3.9h41.2c0.1,1.3,0.2,2.6,0.2,3.9c0,1,0,2.1-0.1,3.1c-1,0.6-1.6,1.7-1.6,2.9c0,1.9,1.6,3.5,3.5,3.5
+	c1.9,0,3.5-1.6,3.5-3.5c0-1.1-0.5-2.1-1.4-2.8c0.1-1.1,0.1-2.2,0.1-3.3c0-1.3-0.1-2.6-0.2-3.9h14.4V100.4z"/>
+</svg>
+
 			<?php
 			echo '<span class="woocommerce-cart-tab__contents">' . intval( $woocommerce->cart->get_cart_contents_count() ) . '</span>';
 			?>
@@ -17,6 +24,7 @@ if ( ! function_exists( 'woocommerce_cart_tab_button' ) ) {
 			<script type="text/javascript">
 			jQuery( '.woocommerce-cart-tab' ).click( function() {
 				jQuery( '.woocommerce-cart-tab-container' ).toggleClass( 'woocommerce-cart-tab-container--visible' );
+				jQuery( 'body' ).toggleClass( 'woocommerce-cart-tab-is-visible' );
 			});
 			</script>
 		</div>
@@ -40,7 +48,7 @@ if ( ! function_exists( 'woocommerce_cart_tab' ) ) {
 		if ( ! is_cart() && ! is_checkout() ) {
 			echo '<div class="woocommerce-cart-tab-container woocommerce-cart-tab-container--' . esc_attr( $position ) . '">';
 
-			woocommerce_cart_tab_button();
+			do_action( 'wcct_before_cart_widget' );
 
 			the_widget( 'WC_Widget_Cart', 'title=' . __( 'Your Cart', 'woocommerce-cart-tab' ) );
 

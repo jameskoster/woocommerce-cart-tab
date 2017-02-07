@@ -4,7 +4,7 @@
  * Handles display of cart tab
  */
 ( function() {
-	
+
 	/**
 	 * Reveal the cart
 	 */
@@ -17,6 +17,8 @@
 			} else {
 				jQuery( '.woocommerce-cart-tab-container' ).addClass( 'woocommerce-cart-tab-container--visible' );
 			}
+
+			jQuery( 'body' ).toggleClass( 'woocommerce-cart-tab-is-visible' );
 		}
 	}
 
@@ -29,6 +31,8 @@
 		if ( windowWidth > 768 ) {
 			jQuery( '.woocommerce-cart-tab-container' ).removeClass( 'woocommerce-cart-tab-container--visible' );
 		}
+
+		jQuery( 'body' ).toggleClass( 'woocommerce-cart-tab-is-visible' );
 	}
 
 	/**
@@ -59,6 +63,7 @@
 
 		if ( ! jQuery( '.button.add_to_cart_button' ).is( e.target ) && ! container.is( e.target ) && container.has( e.target ).length === 0 && container.hasClass( 'woocommerce-cart-tab-container--visible' ) ) {
 			container.removeClass( 'woocommerce-cart-tab-container--visible' );
+			jQuery( 'body' ).removeClass( 'woocommerce-cart-tab-is-visible' );
 		}
 	});
 

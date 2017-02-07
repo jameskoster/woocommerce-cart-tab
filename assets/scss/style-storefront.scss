@@ -10,10 +10,6 @@ $cart_width: 320px;
 	@include transition(all cubic-bezier(.11,.51,.54,.9) .5s);
 	box-sizing: border-box;
 
-	.widget {
-		padding: 0;
-	}
-
 	.widget_shopping_cart {
 		overflow: auto;
 		margin-bottom: 0;
@@ -30,12 +26,10 @@ $cart_width: 320px;
 			text-align: center;
 			font-size: 1.2em;
 			border: 0;
-			height: 68px;
-			box-sizing: border-box;
 		}
 
 		ul.product_list_widget {
-			margin-top: 88px;
+			margin-top: 5.2em;
 			padding: 0 1.618em;
 			margin-bottom: 1.618em;
 
@@ -45,7 +39,7 @@ $cart_width: 320px;
 		}
 
 		.total {
-			margin-bottom: 5.5em;
+			margin-bottom: 8em;
 			padding: 0 3em;
 			padding-bottom: 1em;
 			border: 0;
@@ -59,14 +53,12 @@ $cart_width: 320px;
 			padding: 1.387em 1.618em;
 			z-index: 99;
 			margin: 0;
-			box-sizing: border-box;
 
 			.button {
 				width: 48%;
 				float: left;
 				margin: 0;
 				text-align: center;
-				box-sizing: border-box;
 
 				&:nth-child(2) {
 					float: right;
@@ -113,7 +105,7 @@ $cart_width: 320px;
 .woocommerce-cart-tab {
 	position: absolute;
 	top: 0;
-	width: 68px;
+	width: 60px;
 	height: 68px;
 	box-sizing: border-box;
 	line-height: 1;
@@ -139,6 +131,7 @@ $cart_width: 320px;
 	right: 10px;
 	width: 25px;
 	height: 25px;
+	background: red;
 	line-height: 25px;
 	border-radius: 100%;
 	text-align: center;
