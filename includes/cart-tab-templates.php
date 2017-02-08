@@ -7,8 +7,14 @@ if ( ! function_exists( 'woocommerce_cart_tab_button' ) ) {
 	 */
 	function woocommerce_cart_tab_button() {
 		global $woocommerce;
+
+		$empty = 'woocommerce-cart-tab--empty';
+
+		if ( intval( $woocommerce->cart->get_cart_contents_count() > 0 ) ) {
+			$empty = 'woocommerce-cart-tab--has-contents';
+		}
 		?>
-		<div class="woocommerce-cart-tab">
+		<div class="woocommerce-cart-tab <?php echo $empty; ?>">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86 104.5" class="woocommerce-cart-tab__icon">
 <path class="woocommerce-cart-tab__icon-bag" d="M67.2,26.7C64.6,11.5,54.8,0.2,43.1,0.2C31.4,0.2,21.6,11.5,19,26.7H0.1v77.6h86V26.7H67.2z M43.1,4.2
 	c9.6,0,17.7,9.6,20,22.6H23C25.4,13.8,33.5,4.2,43.1,4.2z M82.1,100.4h-78V30.7h14.4c-0.1,1.3-0.2,2.6-0.2,3.9c0,1.1,0,2.2,0.1,3.3

@@ -10,6 +10,10 @@ $cart_width: 320px;
 	@include transition(all cubic-bezier(.11,.51,.54,.9) .5s);
 	box-sizing: border-box;
 
+	.woocommerce-cart-tab--empty {
+		display: none;
+	}
+
 	.widget {
 		padding: 0;
 	}
@@ -163,8 +167,9 @@ body {
 			background: rgba(#000,.4);
 			z-index: 9999999;
 			@include transition(all cubic-bezier(.11,.51,.54,.9) .5s);
-			@include transform(translateX(-100%));
 			cursor: pointer;
+			opacity: 0;
+			visibility: hidden;
 		}
 	}
 
@@ -174,6 +179,8 @@ body {
 		.site {
 			&:before {
 				@include transform(translateX(0));
+				opacity: 1;
+				visibility: visible;
 			}
 		}
 	}
