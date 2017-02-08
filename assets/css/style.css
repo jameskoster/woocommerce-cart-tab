@@ -127,7 +127,7 @@
 .woocommerce-cart-tab a {
   display: block; }
 
-body .site:before {
+body:before {
   content: "";
   display: block;
   position: fixed;
@@ -144,14 +144,9 @@ body .site:before {
   opacity: 0;
   visibility: hidden; }
 
-body.woocommerce-cart-tab-is-visible {
+.woocommerce-cart-tab-is-visible {
   overflow: hidden; }
-  body.woocommerce-cart-tab-is-visible .site:before {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
+  .woocommerce-cart-tab-is-visible:before {
     opacity: 1;
     visibility: visible; }
 

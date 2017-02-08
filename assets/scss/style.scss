@@ -155,34 +155,29 @@ $cart_width: 320px;
 }
 
 body {
-	.site {
-		&:before {
-			content: "";
-			display: block;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background: rgba(#000,.4);
-			z-index: 9999999;
-			@include transition(all cubic-bezier(.11,.51,.54,.9) .5s);
-			cursor: pointer;
-			opacity: 0;
-			visibility: hidden;
-		}
+	&:before {
+		content: "";
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(#000,.4);
+		z-index: 9999999;
+		@include transition(all cubic-bezier(.11,.51,.54,.9) .5s);
+		cursor: pointer;
+		opacity: 0;
+		visibility: hidden;
 	}
+}
 
-	&.woocommerce-cart-tab-is-visible {
-		overflow: hidden;
+.woocommerce-cart-tab-is-visible {
+	overflow: hidden;
 
-		.site {
-			&:before {
-				@include transform(translateX(0));
-				opacity: 1;
-				visibility: visible;
-			}
-		}
+	&:before {
+		opacity: 1;
+		visibility: visible;
 	}
 }
 

@@ -3,7 +3,7 @@ Contributors: jameskoster
 Tags: woocommerce, ecommerce, cart
 Requires at least: 4.4
 Tested up to: 4.7.1
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,11 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 1. The cart tab.
 
 == Changelog ==
+
+= 1.1.0 - 08/02/2017 =
+* New - Cart tab is now hidden when the cart is empty.
+* Tweak - Overlay styling.
+* Localisation - updated .pot file.
 
 = 1.0.0 - 26/01/2017 =
 * New - The cart tab now opens when an add to cart button on a shop page is clicked.
