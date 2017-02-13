@@ -36,13 +36,15 @@ if ( ! class_exists( 'WooCommerce_Cart_Tab_Frontend' ) ) :
 		 * @return void
 		 */
 		function setup_styles() {
+			$version = get_option( 'woocommerce-cart-tab-version' );
+
 			if ( ! is_cart() && ! is_checkout() ) {
 				if ( 'storefront' == get_option( 'template' ) ) {
-					wp_enqueue_style( 'cart-tab-styles-storefront', plugins_url( '../assets/css/style-storefront.css', __FILE__ ) );
+					wp_enqueue_style( 'cart-tab-styles-storefront', plugins_url( '../assets/css/style-storefront.css', __FILE__ ), '', $version );
 				} else {
-					wp_enqueue_style( 'cart-tab-styles', plugins_url( '../assets/css/style.css', __FILE__ ) );
+					wp_enqueue_style( 'cart-tab-styles', plugins_url( '../assets/css/style.css', __FILE__ ), '', $version );
 				}
-				wp_enqueue_script( 'cart-tab-script', plugins_url( '../assets/js/cart-tab.min.js', __FILE__ ), array( 'jquery' ), '1.0.0' );
+				wp_enqueue_script( 'cart-tab-script', plugins_url( '../assets/js/cart-tab.min.js', __FILE__ ), array( 'jquery' ), $version );
 			}
 		}
 

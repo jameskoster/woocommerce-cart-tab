@@ -3,7 +3,7 @@ Contributors: jameskoster
 Tags: woocommerce, ecommerce, cart
 Requires at least: 4.4
 Tested up to: 4.7.1
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 1. The cart tab.
 
 == Changelog ==
+
+= 1.1.1 - xx/xx/2017 =
+* Dev - Scripts and styles now versioned correctly.
 
 = 1.1.0 - 08/02/2017 =
 * New - Cart tab is now hidden when the cart is empty.
