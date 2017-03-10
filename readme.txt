@@ -2,7 +2,7 @@
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, cart
 Requires at least: 4.4
-Tested up to: 4.7.1
+Tested up to: 4.7.3
 Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -44,7 +44,8 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 
 == Changelog ==
 
-= 1.1.1 - xx/xx/2017 =
+= 1.1.1 - 10/03/2017 =
+* Tweak - WooCommerce 2.7 support. Kudos @webmandesign.
 * Dev - Scripts and styles now versioned correctly.
 
 = 1.1.0 - 08/02/2017 =

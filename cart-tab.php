@@ -5,7 +5,7 @@
  * Version: 1.1.1
  * Description: Displays a sitewide link to the cart which reveals the cart contents on hover.
  * Author: jameskoster
- * Tested up to: 4.7.1
+ * Tested up to: 4.7.3
  * Author URI: http://jameskoster.co.uk
  * Text Domain: woocommerce-cart-tab
  * Domain Path: /languages/
