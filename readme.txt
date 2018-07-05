@@ -2,8 +2,8 @@
 Contributors: jameskoster
 Tags: woocommerce, ecommerce, cart
 Requires at least: 4.4
-Tested up to: 4.7.3
-Stable tag: 1.1.1
+Tested up to: 4.9.6
+Stable tag: 1.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -43,6 +43,9 @@ Thanks! Please fork the repo on <a href="https://github.com/jameskoster/woocomme
 1. The cart tab.
 
 == Changelog ==
+
+= 1.1.2 - 05/07/2018 =
+* Fix - Cart panel will now close automatically when the cart is emptied.
 
 = 1.1.1 - 10/03/2017 =
 * Tweak - WooCommerce 2.7 support. Kudos @webmandesign.

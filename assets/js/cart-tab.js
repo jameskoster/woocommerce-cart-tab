@@ -78,6 +78,15 @@
 		});
 
 		setCartHeight();
+
+		/**
+		 * Hide cart tab when cart is empty
+		 */
+		jQuery( 'body' ).on( 'removed_from_cart', function() {
+				if ( Cookies.get( 'woocommerce_items_in_cart' ) == null ) {
+					hideCart();
+				}
+		});
 	});
 
 	/**

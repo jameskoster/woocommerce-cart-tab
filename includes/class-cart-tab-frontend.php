@@ -25,7 +25,7 @@ if ( ! class_exists( 'WooCommerce_Cart_Tab_Frontend' ) ) :
 		 */
 		public function __construct() {
 			add_action( 'wp_enqueue_scripts', array( $this, 'setup_styles' ), 999 );
-			
+
 			if ( version_compare( WC_VERSION, '2.7', '<' ) ) {
 				add_filter( 'add_to_cart_fragments', array( $this, 'woocommerce_cart_tab_add_to_cart_fragment' ) );
 			} else {
